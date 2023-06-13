@@ -163,7 +163,7 @@ use PlanA23\EGPayment\OpayPayment;
 use PlanA23\EGPayment\PaytabsPayment;
 ```
 ## Payments Function
-pay function
+### pay function
 ```php
     $payment->pay(
 	$amount, 
@@ -191,22 +191,28 @@ or
 response
 ```json
 [
-  'payment_id'=>"", // refrence code that should stored in your orders table
-  'redirect_url'=>"", // redirect url available for some payment gateways
-  'html'=>"" // rendered html available for some payment gateways
+  'payment_id'=>"",
+  'redirect_url'=>"", 
+  'html'=>""
 ]
 ```
-verify function
+payment_id: refrence code that should stored in your orders table
+
+redirect_url: redirect url available for some payment gateways 
+
+html: rendered html available for some payment gateways
+
+### verify function
 ```php
 $payment->verify($request);
 ```
 response
-```json
+```
 [
-  'success'=>true,//or false
+  'success'=>true,
   'payment_id'=>"PID",	  
-  'message'=>"Done Successfully",//message for client	  
-  'process_data'=>""//payment response
+  'message'=>"Done Successfully",	  
+  'process_data'=>""
 ]
 
 ```
