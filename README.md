@@ -191,9 +191,9 @@ or
 response
 ```json
 [
-  'payment_id'=>"",
-  'redirect_url'=>"", 
-  'html'=>""
+  "payment_id"=>"",
+  "redirect_url"=>"", 
+  "html"=>""
 ]
 ```
 payment_id: refrence code that should stored in your orders table
@@ -209,10 +209,10 @@ $payment->verify($request);
 response
 ```
 [
-  'success'=>true,
-  'payment_id'=>"PID",	  
-  'message'=>"Done Successfully",	  
-  'process_data'=>""
+  "success"=>true,
+  "payment_id"=>"PID",	  
+  "message"=>"Done Successfully",	  
+  "process_data"=>""
 ]
 
 ```
